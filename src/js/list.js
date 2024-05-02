@@ -2,7 +2,7 @@
 
 //Funktion för att hämta jobb från APIet
 async function getJobs() {
-    const url = "https://moment21dt207g.onrender.com/api/jobs";
+    const url = "https://moment3dt207g.onrender.com/jobs";
 
     const response = await fetch(url);
 
@@ -24,20 +24,11 @@ function displayJobs(jobs) {
         //Lägg till en klass till varje element
         jobElement.classList.add("jobElement");
 
-        //IF-sats som kollar om endDate är definierat eller null
-        let endDateText;
-        if (job.enddate === null) {
-            endDateText = "Pågående";
-        } else {
-            endDateText = job.enddate;
-        }
-
         jobElement.innerHTML = `
         <p><strong>Företagsnamn:</strong> ${job.companyname}</p>
         <p><strong>Titel:</strong> ${job.jobtitle}</p>
         <p><strong>Plats:</strong> ${job.location}</p>
-        <p><strong>Startdatum</strong> ${job.startdate}</p>
-        <p><strong>Slutdatum:</strong> ${endDateText}</p>
+        <p><strong>Beskrivning:</strong> ${job.description}</p>
         <button class="deleteBtn" type="button">Ta bort</button>
 `;
 
@@ -61,7 +52,7 @@ function displayJobs(jobs) {
 
 //Funktion för att ta bort ett jobb från APIet
 async function deleteJob(jobId) {
-    let deleteUrl = `https://moment21dt207g.onrender.com/api/jobs/${jobId}`;
+    let deleteUrl = `https://moment3dt207g.onrender.com/jobs/${jobId}`;
 
     const response = await fetch(deleteUrl, {
         method: "DELETE"

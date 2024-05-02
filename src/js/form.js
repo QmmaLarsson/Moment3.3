@@ -15,36 +15,33 @@ async function handleSubmit(event) {
     const companyName = document.getElementById("companyname").value;
     const jobTitle = document.getElementById("jobtitle").value;
     const location = document.getElementById("location").value;
-    const startDate = document.getElementById("startdate").value;
-    const endDate = document.getElementById("enddate").value;
+    const description = document.getElementById("description").value;
 
-    if (!companyName.trim() || !jobTitle.trim() || !location.trim() || !startDate.trim()) {
+    if (!companyName.trim() || !jobTitle.trim() || !location.trim() || !description.trim()) {
         alert("Fyll i alla obligatoriska fält")
         return;
     }
 
-    await addJob(companyName, jobTitle, location, startDate, endDate);
+    await addJob(companyName, jobTitle, location, description);
 
     //Återställ formuläret
     document.getElementById("companyname").value = "";
     document.getElementById("jobtitle").value = "";
     document.getElementById("location").value = "";
-    document.getElementById("startdate").value = "";
-    document.getElementById("enddate").value = "";
+    document.getElementById("description").value = "";
 
 }
 
 //Funktion för att lägga till information till APIet
-async function addJob(companyname, jobtitle, location, startdate, enddate) {
+async function addJob(companyname, jobtitle, location, description) {
     //Länk till APIet
-    const url = "https://moment21dt207g.onrender.com/api/jobs";
+    const url = "https://moment3dt207g.onrender.com/jobs";
 
     let jobs = {
         companyname: companyname,
         jobtitle: jobtitle,
         location: location,
-        startdate: startdate,
-        enddate: enddate
+        description: description
     }
 
     const response = await fetch(url, {
