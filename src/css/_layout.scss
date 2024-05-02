@@ -183,6 +183,10 @@ Länkarna ligger i en lista istället för på rad.*/
     #openmenu:hover {
         border-style: inset;
     }
+
+    #menutext {
+        display: none;
+    }
 }
 
 /*Slut på regler för huvudmeny*/
