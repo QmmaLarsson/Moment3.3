@@ -27,14 +27,16 @@
 .button {
     font-size: base.$main-fontsize;
     font-family: base.$font-stack;
-    border-style: none;
-    background-color: base.$darkgreen;
+    border-style: outset;
+    border-width: 10px;
+    border-color: base.$darkpink;
+    background-color: base.$darkpink;
     color: white;
-    box-shadow: base.$primary-shadow;
     padding: 10px;
+    margin-bottom: 10px;
     cursor: pointer;
 }
 
 .button:hover {
-        background-color: base.$darkgreen-complement;
+    border-style: inset;
 }

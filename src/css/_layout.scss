@@ -47,7 +47,7 @@ header {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 15% 85%;
-    background-color: base.$darkgreen;
+    background-color: base.$darkpink;
     box-shadow: base.$primary-shadow;
     height: 100px;
     width: 100%;
@@ -87,10 +87,13 @@ header {
         text-decoration: none;
         padding: 25px;
         margin-right: 5px;
+        border-style: outset;
+        border-color: base.$primary-bg;
+        border-width: 10px;
     }
 
     a:hover {
-        background-color: base.$bg-complement;
+        border-style: inset;
     }
 
     #closemenu {
@@ -110,14 +113,15 @@ header {
 #openmenu {
     /*Knappen visas inte i ursprungsläget*/
     display: none;
-    width: 100%;
-    height: 100px;
+    width: 95%;
+    height: 90px;
+    margin: auto;
     background-color: base.$primary-bg;
     color: base.$black;
-    border-color: base.$darkgreen;
     box-shadow: none;
-    border-width: 5px;
-    border-style: solid;
+    border-style: outset;
+    border-color: base.$primary-bg;
+    border-width: 10px;
     cursor: pointer;
 }
 
@@ -152,6 +156,12 @@ Länkarna ligger i en lista istället för på rad.*/
             display: block;
             width: 100%;
             padding: 30px;
+            border-style: none;
+        }
+
+        a:hover {
+            border-style: none;
+            background-color: base.$darkpink;
         }
 
         #closemenu {
@@ -160,7 +170,7 @@ Länkarna ligger i en lista istället för på rad.*/
         }
 
         #closemenu:hover {
-            background-color: base.$bg-complement;
+            background-color: base.$darkpink;
         }
     }
 
@@ -171,7 +181,7 @@ Länkarna ligger i en lista istället för på rad.*/
     }
 
     #openmenu:hover {
-        background-color: base.$bg-complement;
+        border-style: inset;
     }
 }
 
@@ -180,7 +190,7 @@ footer {
     grid-area: 2/1/3/2;
     align-self: end;
     height: 60px;
-    background-color: base.$darkgreen;
+    background-color: base.$darkpink;
     box-shadow: base.$primary-shadow;
     text-align: center;
     margin-top: 0;
@@ -194,8 +204,8 @@ footer {
 .jobElement {
     background-color: white;
     padding: 20px;
-    border-radius: 20px;
-    box-shadow: base.$primary-shadow;
+    border-style: double;
+    border-color: base.$darkpink;
     margin-left: 30%;
     margin-right: 30%;
     margin-bottom: 20px;
@@ -218,16 +228,32 @@ footer {
 form {
     background-color: white;
     padding: 20px;
-    border-radius: 20px;
-    box-shadow: base.$primary-shadow;
+    border-style: double;
+    border-color: base.$darkpink;
     margin-top: 20px;
     margin-left: 30%;
     margin-right: 30%;
-}
 
-input {
-    width: 80%;
-    padding: 5px;
+    input {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        cursor: pointer;
+        border-style: solid;
+        border-color: base.$darkpink;
+        border-width: 2px;
+    }
+    
+    textarea {
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+        border-style: solid;
+        border-color: base.$darkpink;
+        border-width: 2px;
+        box-sizing: border-box;
+        cursor: pointer
+    }
 }
 
 #submit,
@@ -259,8 +285,8 @@ input {
 #textElement {
     background-color: white;
     padding: 20px;
-    border-radius: 20px;
-    box-shadow: base.$primary-shadow;
+    border-style: double;
+    border-color: base.$darkpink;
     margin-left: 30%;
     margin-right: 30%;
     margin-bottom: 20px;
