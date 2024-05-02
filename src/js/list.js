@@ -33,7 +33,7 @@ function displayJobs(jobs) {
 `;
 
         // Lägg till jobbets ID som ett data-attribut
-        jobElement.dataset.jobId = job.id;
+        jobElement.dataset.jobId = job._id;
 
         jobContainer.appendChild(jobElement);
 
