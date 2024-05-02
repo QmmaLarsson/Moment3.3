@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lägg till jobb</title>
+    <link rel="stylesheet" href="css/main.scss">
+    <script src="js/main.js" type="module"></script>
+    <script src="js/form.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/d768b3824b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+
+        <a id="logo" href="index.html"><img src="images/logo.svg" alt="Logotyp"></a>
+
+        <!-- En knapp för att öppna meny på mindre skärmar -->
+        <button id="openmenu" class="button" type="button">
+            <span><i class="fa-solid fa-bars"></i></span>
+            <span>
+                <br>MENY
+            </span>
+        </button>
+
+        <nav id="huvudmeny">
+
+            <!-- En knapp för att stänga menyn på mindre skärmar -->
+            <button id="closemenu" class="button" type="button">
+                <span>X</span>
+                <span>STÄNG</span>
+            </button>
+
+            <ul>
+                <li><a href="index.html">STARTSIDA</a></li>
+                <li><a href="add.html">LÄGG TILL JOBB</a></li>
+                <li><a href="about.html">OM</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <h1>Lägg till jobb</h1>
+
+        <form id="jobForm">
+            <label for="companyname"><strong>* Företagsnamn:</strong></label>
+            <br>
+            <input type="text" id="companyname" name="companyname" required>
+            <br><br>
+            <label for="jobtitle"><strong>* Titel:</strong></label>
+            <br>
+            <input type="text" id="jobtitle" name="jobtitle" required>
+            <br><br>
+            <label for="location"><strong>* Plats:</strong></label>
+            <br>
+            <input type="text" id="location" name="location" required>
+            <br><br>
+            <label for="startdate"><strong>* Startdatum:</strong></label>
+            <br>
+            <input type="date" id="startdate" name="startdate" required>
+            <br><br>
+            <label for="enddate"><strong>Slutdatum:</strong></label>
+            <br>
+            <input type="date" id="enddate" name="enddate">
+            <br><br>
+            <button id="submit" type="submit">Spara jobb</button>
+            <button id="reset" type="reset">Rensa formulär</button>
+        </form>
+
+        <p id="formTextElement">* = Obligatoriska fält</p>
+    </main>
+
+    <footer>
+
+        <p>Laborationsuppgift för kursen DT207G, Backend-baserad webbutveckling <br> &copy; Copyright Emma
+            Larsson,
+            2024
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

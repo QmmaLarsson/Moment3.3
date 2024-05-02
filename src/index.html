@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startsida</title>
+    <link rel="stylesheet" href="css/main.scss">
+    <script src="js/main.js" type="module"></script>
+    <script src="js/list.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/d768b3824b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+
+        <a id="logo" href="index.html"><img src="images/logo.svg" alt="Logotyp"></a>
+
+        <!-- En knapp för att öppna meny på mindre skärmar -->
+        <button id="openmenu" class="button" type="button">
+            <span><i class="fa-solid fa-bars"></i></span>
+            <span>
+                <br>MENY
+            </span>
+        </button>
+
+        <nav id="huvudmeny">
+
+            <!-- En knapp för att stänga menyn på mindre skärmar -->
+            <button id="closemenu" class="button" type="button">
+                <span>X</span>
+                <span>STÄNG</span>
+            </button>
+
+            <ul>
+                <li><a href="index.html">STARTSIDA</a></li>
+                <li><a href="add.html">LÄGG TILL JOBB</a></li>
+                <li><a href="about.html">OM</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <h1>Jobb</h1>
+
+        <div class="jobContainer"></div>
+
+    </main>
+
+    <footer>
+
+        <p>Laborationsuppgift för kursen DT207G, Backend-baserad webbutveckling <br> &copy; Copyright Emma
+            Larsson,
+            2024
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
